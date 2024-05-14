@@ -7,7 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,7 +14,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 
 // Class
 public class Person {
@@ -25,6 +23,7 @@ public class Person {
   private Long personId;
   private String username;
   private String email;
-  private Boolean password; // Hashed password
+  private String password; // Hashed password
   private String roles;
+  private boolean enable;
 }
